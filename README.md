@@ -1,7 +1,9 @@
 [![fair-software.eu](https://img.shields.io/badge/fair--software.eu-%E2%97%8F%20%20%E2%97%8F%20%20%E2%97%8B%20%20%E2%97%8F%20%20%E2%97%8B-orange)](https://fair-software.eu)
 
 # workshop-admin
-Admin system for carpentry workshops
+Admin system for carpentry workshops.
+
+The current implementation is for demo purposes only. We may want to consider rewriting it from scratch using another technology. There is a starting point in Java at [https://github.com/jsteyn/certify](https://github.com/jsteyn/certify).
 
 ## Installation
 
