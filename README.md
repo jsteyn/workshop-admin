@@ -3,10 +3,18 @@
 # workshop-admin
 Admin system for carpentry workshops.
 
+## Aim:
 The purpose of this software is to help with the organisation of Carpentries 
-Workshops. It is written in Java and will require a database in the background 
+Workshops. 
+
+## Technology:
+It is written in Java and will require a database in the background 
 which will default to sqlite.
 
+## Audience:
+The software is aimed at Carpentries workshop hosts, organisers, instructors and helpers.
+
+## Features:
 The software will provide a way to capture learners, helpers, instructors and 
 organisers. It will assist in the sending of emails and recording presence at 
 workshops.
