@@ -1,4 +1,4 @@
-package com.jannetta.carpentriesadmin.controller;
+package com.jannetta.carpentriesadmin.model;
 
 public class Workshop {
     String workshopID;
