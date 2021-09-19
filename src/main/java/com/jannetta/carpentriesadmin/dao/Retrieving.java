@@ -26,6 +26,7 @@ public class Retrieving {
                 System.out.print(String.format("%40s",resultSet.getString(9)) );// email
                 System.out.print(String.format("%20s",resultSet.getString(7)) );// stage
                 String school = resultSet.getString(8);
+                if (school != null)
                 System.out.print(String.format("%30s", (school.length()>20?school.substring(0,19):school)));// school
                 String programme = resultSet.getString(6);
                 System.out.print(String.format("%20s",(programme.length()>18?programme.substring(0,17):programme)) );// programme

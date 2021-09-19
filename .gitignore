@@ -5,3 +5,5 @@ target/
 system.properties
 smtp.properties
 .idea/
+Scripts/createVMTable.sql
+Scripts/NICD.sql
