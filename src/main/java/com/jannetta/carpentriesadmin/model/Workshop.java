@@ -1,21 +1,90 @@
 package com.jannetta.carpentriesadmin.model;
 
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 public class Workshop {
+    private Logger logger = LoggerFactory.getLogger(getClass());
+    /**
+     String workshopID, String workshopName, String startDate, String endDate,
+     String startTime, String endTime, String communityDocURL, String preWorkshopSurveyURL,
+     String postWorkshopSurveyURL, String surveyResults, String host, String hostInstitution,
+     String workshopWebsite, String emailRemindDate, String postWorkshopSurveyRemindDate
+     **/
+
+    private static final String[] columnNames = {"Workshop ID", "Workshop Name", "WorkshopType", "Date From", "Date To", "URL", "Print"};
+
+    @SerializedName("workshopID")
+            @Expose
     String workshopID;
+
+    @SerializedName("workshopName")
+            @Expose
     String workshopName;
+
+    @SerializedName("workshopType")
+    @Expose
+    private String workshopType;
+
+    @SerializedName("startDate")
+    @Expose
     String startDate;
+
+    @SerializedName("endDate")
+    @Expose
     String endDate;
+
+    @SerializedName("startTime")
+    @Expose
     String startTime;
+
+    @SerializedName("endTime")
+    @Expose
     String endTime;
+
+    @SerializedName("workshopURL")
+    @Expose
+    String workshopURL;
+
+    @SerializedName("communityDocURL")
+    @Expose
     String communityDocURL;
+
+    @SerializedName("preWorkshopSurveyURL")
+    @Expose
     String preWorkshopSurveyURL;
+
+    @SerializedName("postWorkshopSurveyURL")
+    @Expose
     String postWorkshopSurveyURL;
+
+    @SerializedName("surveyResults")
+    @Expose
     String surveyResults;
+
+    @SerializedName("host")
+    @Expose
     String host;
+
+    @SerializedName("hostInstitution")
+    @Expose
     String hostInstitution;
+
+    @SerializedName("workshopWebsite")
+    @Expose
     String workshopWebsite;
+
+    @SerializedName("emailRemindDate")
+    @Expose
     String emailRemindDate;
+
+    @SerializedName("postWorkshopSurveyRemindDate")
+    @Expose
     String postWorkshopSurveyRemindDate;
+
+    private boolean print = false;
 
     public String getWorkshopID() {
         return workshopID;
@@ -63,6 +132,22 @@ public class Workshop {
 
     public void setEndTime(String endTime) {
         this.endTime = endTime;
+    }
+
+    public String getWorkshopURL() {
+        return workshopURL;
+    }
+
+    public void setWorkshopURL(String workshopURL) {
+        this.workshopURL = workshopURL;
+    }
+
+    public String getWorkshopType() {
+        return workshopType;
+    }
+
+    public void setWorkshopType(String workshopType) {
+        this.workshopType = workshopType;
     }
 
     public String getCommunityDocURL() {
@@ -137,8 +222,22 @@ public class Workshop {
         this.postWorkshopSurveyRemindDate = postWorkshopSurveyRemindDate;
     }
 
+    public static String[] getColumnNames() {
+        return columnNames;
+    }
+
+    public static int getColumnCount() {
+        return columnNames.length;
+    }
+
     public Workshop() {
     }
+    /**
+     String workshopID, String workshopName, String startDate, String endDate,
+     String startTime, String endTime, String communityDocURL, String preWorkshopSurveyURL,
+     String postWorkshopSurveyURL, String surveyResults, String host, String hostInstitution,
+     String workshopWebsite, String emailRemindDate, String postWorkshopSurveyRemindDate
+     **/
 
     public Workshop(String workshopID, String workshopName, String startDate, String endDate,
                     String startTime, String endTime, String communityDocURL, String preWorkshopSurveyURL,
@@ -159,5 +258,14 @@ public class Workshop {
         this.workshopWebsite = workshopWebsite;
         this.emailRemindDate = emailRemindDate;
         this.postWorkshopSurveyRemindDate = postWorkshopSurveyRemindDate;
+        this.print = false;
+    }
+
+    public boolean isPrint() {
+        return print;
+    }
+
+    public void setPrint(boolean print) {
+        this.print = print;
     }
 }

@@ -6,12 +6,13 @@ import com.jannetta.carpentriesadmin.dao.Inserting;
 import com.jannetta.carpentriesadmin.dao.Retrieving;
 
 import javax.mail.*;
-import java.io.File;
 import java.io.FileNotFoundException;
 import java.time.Instant;
 import java.util.ArrayList;
 import java.util.Properties;
 import java.util.Scanner;
+import java.io.File;
+
 
 public class SendMail {
 
@@ -33,7 +34,7 @@ public class SendMail {
             }
         };
         Session session = Session.getInstance(props, auth);
-        final Scanner scin = new Scanner(System.in);
+        Scanner scin = new Scanner(System.in);
         System.out.println("File containing template: " );
         String template = scin.nextLine();
         System.out.println("From: ");
@@ -53,7 +54,6 @@ public class SendMail {
             System.out.println("Sending email: " + subject);
 
             StringBuilder stringBuilder = new StringBuilder();
-            String name = "John";
             while (sc.hasNext()) {
                 line = sc.nextLine();
                 stringBuilder.append(line + "\n");

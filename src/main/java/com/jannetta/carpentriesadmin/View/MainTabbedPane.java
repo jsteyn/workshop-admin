@@ -12,9 +12,10 @@ public class MainTabbedPane extends JTabbedPane{
 
     public MainTabbedPane() {
         super();
-        addTab("Workshops", new JPanel());
-        addTab("Learners", new JPanel());
-        addTab("Lessons", new JPanel());
+        addTab("Workshops", new WorkshopPanel());
+        addTab("Lessons", new LessonPanel());
+        addTab("People", new PeoplePanel());
+        addTab( "Workshop Lessons", new WorkshopLessonsPanel());
     }
 
 }

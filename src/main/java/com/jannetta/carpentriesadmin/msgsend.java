@@ -20,8 +20,8 @@ public class msgsend {
      Port for TLS/STARTTLS: 587
      */
     public static void main(String[] args) {
-        final String fromEmail = "njss3@newcastle.ac.uk"; //requires valid gmail id
-        final String password = "rb5xm3LYxz3Moa"; // correct password for gmail id
+        final String fromEmail = "njss3@newcastle.ac.uk"; //requires valid id
+        final String password = "rb5xm3LYxz3Moa"; // correct password for id
         final String toEmail = "jannetta@henning.org"; // can be any email id
 
         System.out.println("TLSEmail Start");
@@ -38,8 +38,9 @@ public class msgsend {
                 return new PasswordAuthentication(fromEmail, password);
             }
         };
+
         Session session = Session.getInstance(props, auth);
-        String template = "data/EmailTemplates/InviteHelpers.txt";
+        String template = "EmailTemplates/TestMail.txt";
         try (Scanner sc = new Scanner(new File(template))) {
             EmailUtil.sendEmail(session, toEmail,"Admin Testing Subject", "TLSEmail Testing Body","","");
         } catch (FileNotFoundException e) {

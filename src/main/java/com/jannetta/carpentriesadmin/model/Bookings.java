@@ -4,7 +4,6 @@ public class Bookings {
     String BookingReference;
     String BookingDate;
     String WorkshopID;
-    String LessonID;
     String PersonID;
     String Attended;
 
@@ -32,14 +31,6 @@ public class Bookings {
         WorkshopID = workshopID;
     }
 
-    public String getLessonID() {
-        return LessonID;
-    }
-
-    public void setLessonID(String lessonID) {
-        LessonID = lessonID;
-    }
-
     public String getPersonID() {
         return PersonID;
     }
@@ -60,7 +51,6 @@ public class Bookings {
         BookingReference = bookingReference;
         BookingDate = bookingDate;
         WorkshopID = workshopID;
-        LessonID = lessonID;
         PersonID = personID;
         Attended = attended;
     }

@@ -103,10 +103,6 @@ public class Importing {
                     booking.setWorkshopID(workshopID.trim());
                 else if (indexlist[2] != 999)
                     booking.setWorkshopID(nextLine[indexlist[2]].trim());
-                if (!lessonID.equals(""))
-                    booking.setLessonID(lessonID.trim());
-                else if (indexlist[3] != 999)
-                    booking.setLessonID(nextLine[indexlist[3]].trim());
                 if (indexlist[4] != 999)
                     booking.setPersonID(nextLine[indexlist[4]].trim());
                 if (indexlist[5] != 999)
@@ -115,12 +111,11 @@ public class Importing {
                 pstmt.setString(1, booking.getBookingReference()); // Person ID
                 pstmt.setString(2, booking.getBookingDate()); // FirstName
                 pstmt.setString(3, booking.getWorkshopID()); // MiddleNames
-                pstmt.setString(4, booking.getLessonID()); // LastName
                 pstmt.setString(5, booking.getPersonID()); // ContactNumber
                 pstmt.setString(6, booking.getAttended()); // Programme
 
                 System.out.println("insert:" + booking.getBookingReference() + " " + booking.getBookingDate() +
-                        " " + booking.getWorkshopID() + " " + booking.getLessonID() + " " + booking.getPersonID() +
+                        " " + booking.getWorkshopID() + " " + " " + booking.getPersonID() +
                         " " + booking.getAttended());
                 pstmt.addBatch();
             }

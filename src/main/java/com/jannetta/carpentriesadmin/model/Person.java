@@ -2,8 +2,12 @@ package com.jannetta.carpentriesadmin.model;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class Person {
+    private static Logger logger = LoggerFactory.getLogger(Person.class);
+    private static final String[] columnNames = {"User ID", "First Name", "Middle Names", "Lastname",  "Email", "Programme", "Print"};
 
     @SerializedName("personID")
     @Expose
@@ -40,6 +44,42 @@ public class Person {
     @SerializedName("email")
     @Expose
     private String email;
+
+    private boolean print = false;
+
+    public Person(String personID, String firstName, String middleNames, String lastName, String email, String programme) {
+        this.personID = personID;
+        this.firstName = firstName;
+        this.middleNames = middleNames;
+        this.lastName = lastName;
+        this.email = email;
+        this.programme = programme;
+        this.print = false;
+    }
+
+    public Person() {
+        this.personID = "";
+        this.firstName = "";
+        this.middleNames = "";
+        this.lastName = "";
+        this.contactNumber = "";
+        this.programme = "";
+        this.stage = "";
+        this.school = "";
+        this.email = "";
+    }
+
+    public Person(String personID, String firstName, String middleNames, String lastName, String email, String programme, String contactNumber, String stage, String school) {
+        this.personID = personID;
+        this.firstName = firstName;
+        this.middleNames = middleNames;
+        this.lastName = lastName;
+        this.contactNumber = contactNumber;
+        this.programme = programme;
+        this.stage = stage;
+        this.school = school;
+        this.email = email;
+    }
 
     public String getPersonID() {
         return personID;
@@ -113,28 +153,17 @@ public class Person {
         this.email = email;
     }
 
-    public Person() {
-        this.personID = "";
-        this.firstName = "";
-        this.middleNames = "";
-        this.lastName = "";
-        this.contactNumber = "";
-        this.programme = "";
-        this.stage = "";
-        this.school = "";
-        this.email = "";
+    public static String[] getColumnNames() {return columnNames;}
+
+    public static int getColumnCount() {return columnNames.length;}
+
+
+    public boolean isPrint() {
+        return print;
     }
 
-    public Person(String personID, String firstName, String middleNames, String lastName, String contactNumber,
-                  String programme, String stage, String school, String email) {
-        this.personID = personID;
-        this.firstName = firstName;
-        this.middleNames = middleNames;
-        this.lastName = lastName;
-        this.contactNumber = contactNumber;
-        this.programme = programme;
-        this.stage = stage;
-        this.school = school;
-        this.email = email;
+    public void setPrint(boolean print) {
+        this.print = print;
     }
+
 }

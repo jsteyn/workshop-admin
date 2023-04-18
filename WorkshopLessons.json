@@ -1,0 +1,53 @@
+[
+  {
+    "workshopID": "2022-05-30-NCL",
+    "Lessons": [
+      {
+        "lessonID": "sg1",
+        "description": "Version Control with Git"
+      },
+      {
+        "lessonID": "su1",
+        "description": "The Unix Shell"
+      },
+      {
+        "lessonID": "sp1",
+        "description": "Programming with Python"
+      }
+    ]
+  },
+  {
+    "workshopID": "2022-03-29-NCL",
+    "Lessons": [
+      {
+        "lessonID": "sg1",
+        "description": "Version Control with Git"
+      },
+      {
+        "lessonID": "su1",
+        "description": "The Unix Shell"
+      },
+      {
+        "lessonID": "sp1",
+        "description": "Programming with Python"
+      }
+    ]
+  },
+  {
+    "workshopID": "2021-10-04-NCL",
+    "Lessons": [
+      {
+        "lessonID": "sg1",
+        "description": "Version Control with Git"
+      },
+      {
+        "lessonID": "su1",
+        "description": "The Unix Shell"
+      },
+      {
+        "lessonID": "sp1",
+        "description": "Programming with Python"
+      }
+    ]
+  }
+]

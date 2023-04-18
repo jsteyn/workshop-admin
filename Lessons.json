@@ -1,0 +1,58 @@
+[
+  {
+    "lessonID": "sg1",
+    "description": "Version Control with Git"
+  },
+  {
+    "lessonID": "su1",
+    "description": "The Unix Shell"
+  },
+  {
+    "lessonID": "sp1",
+    "description": "Programming with Python"
+  },
+  {
+    "lessonID": "sm1",
+    "description": "Introduction to Markdown"
+  },
+  {
+    "lessonID": "sp2",
+    "description": "Plotting and Programming in Python"
+  },
+  {
+    "lessonID": "ad1",
+    "description": "Foundations of Astronomical Data Science"
+  },
+  {
+    "lessonID": "e1",
+    "description": "Ecology Workshop Overview"
+  },
+  {
+    "lessonID": "d2",
+    "description": "Data Organization in Spreadsheets for Ecologists"
+  },
+  {
+    "lessonID": "e3",
+    "description": "Data Cleaning with OpenRefine for Ecologists"
+  },
+  {
+    "lessonID": "e4",
+    "description": "Data Management with SQL for Ecologists"
+  },
+  {
+    "lessonID": "e5",
+    "description": "Data Analysis and Visualization in R for Ecologists"
+  },
+  {
+    "lessonID": "d0",
+    "description": "OpenRefine for Social Science Data",
+    "lessonURL": "https://datacarpentry.org/openrefine-socialsci/",
+    "exercisesURL": ""
+  },
+  {
+    "lessonID": "it",
+    "description": "Instructor Training",
+    "lessonURL": "https://carpentries.github.io/instructor-training/",
+    "exercisesURL": ""
+  }
+]

@@ -1,0 +1,15 @@
+<Subject: Test message>
+
+Dear <FirstName>
+
+test test test test
+
+test some more
+test some more
+<../data/Link.inc>
+
+Please contact me if you have any questions.
+
+Regards
+
+<../data/Template_Includes.inc>
